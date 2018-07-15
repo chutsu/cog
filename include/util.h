@@ -1,5 +1,5 @@
-#ifndef __COG_UTIL_H__
-#define __COG_UTIL_H__
+#ifndef COG_UTIL_H
+#define COG_UTIL_H
 
 #include <math.h>
 #include <time.h>
@@ -12,9 +12,6 @@
 #include <termios.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-
-
-
 
 /* DEBUG / LOG */
 #ifdef NDEBUG
@@ -98,8 +95,6 @@ char *malloc_string(const char *s);
         FREE_FUNC((void *) TARGET); \
     }
 
-
-
 /* STRING */
 int trim_char(const char c);
 char *trim(const char *s);
@@ -107,14 +102,11 @@ char **split_kv(const char *s, const char token);
 char **split(const char *s, const char *token, int *nb_elements);
 char *strex(const char *s, const char *open, const char *close);
 
-
 /* RANDOM */
 int randi(int min, int max);
 float randf(float min, float max);
 char *randstr(size_t length);
 void *sample(void **array, int array_length);
-
-
 
 /* COMPARATOR */
 #ifndef FLOAT_EPSILON

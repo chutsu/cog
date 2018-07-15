@@ -1,5 +1,5 @@
-#ifndef __COG_DARRAY_H__
-#define __COG_DARRAY_H__
+#ifndef COG_DARRAY_H
+#define COG_DARRAY_H
 
 #include <stdlib.h>
 #include "util.h"

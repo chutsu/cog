@@ -1,5 +1,5 @@
-#ifndef __COG_STACK_H__
-#define __COG_STACK_H__
+#ifndef COG_STACK_H
+#define COG_STACK_H
 
 #include <stdlib.h>
 

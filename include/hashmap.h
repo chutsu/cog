@@ -1,5 +1,5 @@
-#ifndef __COG_HASHMAP_H__
-#define __COG_HASHMAP_H__
+#ifndef COG_HASHMAP_H
+#define COG_HASHMAP_H
 
 #include <stdint.h>
 #include <string.h>

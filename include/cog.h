@@ -1,5 +1,5 @@
-#ifndef __LIB_COG_H__
-#define __LIB_COG_H__
+#ifndef LIB_COG_H
+#define LIB_COG_H
 
 #include "cog/darray.h"
 #include "cog/hashmap.h"

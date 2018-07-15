@@ -1,5 +1,5 @@
-#ifndef __COG_MUNIT_H__
-#define __COG_MUNIT_H__
+#ifndef COG_MUNIT_H
+#define COG_MUNIT_H
 
 #include <stdio.h>
 
