@@ -2,24 +2,23 @@ include config.mk
 PREFIX="/usr/local"
 
 default: all done
+.PHONY: lib
 
 all: mkdirs
-	@make -s -C src
+	@make -s -C lib
 	@make -s -C tests
 
 debug: mkdirs
-	@make -C src
+	@make -C lib
 	@make -C tests
 
 mkdirs: rmdirs
-	@mkdir bin
-	@mkdir obj
-	@mkdir lib
+	@mkdir build
+	@mkdir build/obj
+	@mkdir build/bin
 
 rmdirs:
-	@rm -rf bin
-	@rm -rf obj
-	@rm -rf lib
+	@rm -rf build
 
 run_tests: scripts/test_runner.sh
 	@./$<
@@ -30,7 +29,7 @@ clean: rmdirs
 
 install:
 	@echo "installing cog to [${PREFIX}/lib]"
-	@cp ./lib/libcog.a ${PREFIX}/lib
+	# @cp ./lib/libcog.a ${PREFIX}/lib
 	@mkdir -p ${PREFIX}/include/cog
 	@cp include/* ${PREFIX}/include/cog/
 	@echo "cog installed!"

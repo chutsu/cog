@@ -319,6 +319,8 @@ int fltcmp(float v1, float v2)
     } else if (v1 < v2) {
         return -1;
     }
+
+    return -2;
 }
 
 int fltcmp_asc(float v1, float v2)

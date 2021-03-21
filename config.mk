@@ -1,10 +1,10 @@
 # DIRS
-OBJ_DIR = ${PWD}/obj
-BIN_DIR = ${PWD}/bin
+OBJ_DIR = ${PWD}/build/obj
+BIN_DIR = ${PWD}/build/bin
 LIB_DIR = ${PWD}/lib
 
 # INCLUDE AND LIBRARY PATHS
-INCLUDES = -I${PWD}/include -I/usr/include -I/usr/local/include
+INCLUDES = -I${PWD}/lib -I/usr/include -I/usr/local/include
 LIBS = -L$(LIB_DIR) -lcog -lrt -L/usr/lib -L/usr/local/lib
 
 # C COMPILER
@@ -30,8 +30,7 @@ COMPILE_OBJ = \
 
 MAKE_TEST = \
 	echo "CC [$@.c]"; \
-	$(CC) $(CFLAGS) -c $@.c -o $(OBJ_DIR)/$@.o; \
-	$(CC) $(CFLAGS) $(OBJ_DIR)/$@.o -o $(BIN_DIR)/$@ $(LIBS);
+	$(CC) $(CFLAGS) $@.c -o $(BIN_DIR)/$@ $(LIBS);
 
 MAKE_STATIC_LIB = \
 	echo "AR [$@]"; \

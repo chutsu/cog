@@ -1,0 +1,11 @@
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: true
+AlwaysBreakTemplateDeclarations: true
+BinPackArguments: false
+BinPackParameters: false
+FixNamespaceComments: true
+IndentCaseLabels: true
+PenaltyReturnTypeOnItsOwnLine: 100
+PenaltyBreakBeforeFirstCallParameter: 10000
+SortIncludes: false
+SpaceAfterCStyleCast: true
