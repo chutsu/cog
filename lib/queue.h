@@ -6,18 +6,15 @@
 #include "list.h"
 #include "util.h"
 
-
 /* STRUCTURES */
-struct queue
-{
-    int count;
-    struct list *queue;
+struct queue {
+  int count;
+  struct list *queue;
 };
 
 /* ERROR MESSAGES */
 #define QUEUE_ENULL "queue is NULL!"
 #define QUEUE_EDNULL "data is NULL!"
-
 
 /* FUNCTIONS */
 struct queue *queue_new(void);

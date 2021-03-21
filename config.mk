@@ -1,11 +1,12 @@
 # DIRS
-OBJ_DIR = ${PWD}/build/obj
-BIN_DIR = ${PWD}/build/bin
 LIB_DIR = ${PWD}/lib
+BLD_DIR = ${PWD}/build
+OBJ_DIR = $(BLD_DIR)/obj
+BIN_DIR = $(BLD_DIR)/bin
 
 # INCLUDE AND LIBRARY PATHS
 INCLUDES = -I${PWD}/lib -I/usr/include -I/usr/local/include
-LIBS = -L$(LIB_DIR) -lcog -lrt -L/usr/lib -L/usr/local/lib
+LIBS = -L$(BLD_DIR) -lcog -lrt -L/usr/lib -L/usr/local/lib
 
 # C COMPILER
 CC = gcc
@@ -34,4 +35,4 @@ MAKE_TEST = \
 
 MAKE_STATIC_LIB = \
 	echo "AR [$@]"; \
-	$(AR) $(ARFLAGS) $(LIB_DIR)/$@.a $(wildcard $(OBJ_DIR)/*.o);
+	$(AR) $(ARFLAGS) $(BLD_DIR)/$@.a $(wildcard $(OBJ_DIR)/*.o);

@@ -4,23 +4,20 @@
 #include <stdlib.h>
 #include "util.h"
 
-
 /* STRUCTURES */
-struct darray
-{
-    int end;
-    int max;
+struct darray {
+  int end;
+  int max;
 
-    size_t element_size;
-    size_t expand_rate;
+  size_t element_size;
+  size_t expand_rate;
 
-    void **contents;
+  void **contents;
 };
-
 
 /* CONSTANTS */
 #ifndef DEFAULT_EXPAND_RATE
-  #define DEFAULT_EXPAND_RATE 300
+#define DEFAULT_EXPAND_RATE 300
 #endif
 
 /* ERROR MESSAGES */
@@ -34,7 +31,6 @@ struct darray
 #define DARRAY_ENEWMAX "new max must be > 0!"
 #define DARRAY_EEXPAND "failed to expand array to new size: %d"
 
-
 /* FUNCTIONS */
 struct darray *darray_new(size_t element_size, size_t initial_max);
 void darray_destroy(struct darray *array);
@@ -44,11 +40,9 @@ void darray_clear_destroy(struct darray *array);
 int darray_push(struct darray *array, void *el);
 void *darray_pop(struct darray *array);
 
-int darray_contains(
-    struct darray *array,
-    void *el,
-    int (*cmp)(const void *, const void *)
-);
+int darray_contains(struct darray *array,
+                    void *el,
+                    int (*cmp)(const void *, const void *));
 struct darray *darray_copy(struct darray *array);
 
 void *darray_new_element(struct darray *array);
@@ -58,7 +52,7 @@ void *darray_last(struct darray *array);
 void darray_set(struct darray *array, int i, void *el);
 void *darray_get(struct darray *array, int i);
 
-void *darray_update(struct darray* array, int i, void *el);
+void *darray_update(struct darray *array, int i, void *el);
 void *darray_remove(struct darray *array, int i);
 
 int darray_expand(struct darray *array);
