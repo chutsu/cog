@@ -3,10 +3,10 @@ include $(PWD)/config.mk
 SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
-default: $(OBJS) libcog
+default: libcog
 
 %.o: %.c
 	$(COMPILE_OBJ)
 
-libcog:
+libcog: $(OBJS) 
 	$(MAKE_STATIC_LIB)

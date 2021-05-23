@@ -5,8 +5,8 @@ default: all done
 .PHONY: lib
 
 all: mkdirs
-	@make -s -C lib
-	@make -s -C tests
+	@make -s -C lib -j4
+	@make -s -C tests -j4
 
 debug: mkdirs
 	@make -C lib

@@ -2,6 +2,7 @@
 #define COG_DARRAY_H
 
 #include <stdlib.h>
+#include <math.h>
 #include "util.h"
 
 /* STRUCTURES */

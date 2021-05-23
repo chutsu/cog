@@ -6,10 +6,11 @@ BIN_DIR = $(BLD_DIR)/bin
 
 # INCLUDE AND LIBRARY PATHS
 INCLUDES = -I${PWD}/lib -I/usr/include -I/usr/local/include
-LIBS = -L$(BLD_DIR) -lcog -lrt -L/usr/lib -L/usr/local/lib
+LIBS = -L$(BLD_DIR) -lm -lcog -lrt -L/usr/lib -L/usr/local/lib
 
 # C COMPILER
-CC = gcc
+# CC = gcc
+CC = tcc
 STANDARD = -std=gnu99
 DEBUG_FLAGS = -g
 WARN_FLAGS = -Wall
