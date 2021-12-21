@@ -1,4 +1,4 @@
-# cog [![Build Status](https://github.com/chutsu/cog/actions/workflows/ci.yml/badge.svg)]
+# cog [![Build Status](https://github.com/chutsu/cog/actions/workflows/ci.yml/badge.svg)][1]
 
 **cog** is a common library in C (similar to Boost for C++, but for C). It is
 heavily based on the code [Zed Shaw][2] produced in [Learn C the Hard Way][3].
