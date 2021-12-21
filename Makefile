@@ -20,8 +20,8 @@ mkdirs: rmdirs
 rmdirs:
 	@rm -rf build
 
-run_tests: scripts/test_runner.sh
-	@./$<
+run_tests:
+	@./scripts/test_runner.sh
 
 clean: rmdirs
 	@echo "cleaning ..."
@@ -29,7 +29,7 @@ clean: rmdirs
 
 install:
 	@echo "installing cog to [${PREFIX}/lib]"
-	# @cp ./lib/libcog.a ${PREFIX}/lib
+	@cp ./build/libcog.a ${PREFIX}/lib
 	@mkdir -p ${PREFIX}/include/cog
 	@cp include/* ${PREFIX}/include/cog/
 	@echo "cog installed!"

@@ -1,0 +1,16 @@
+name: ci
+on: [push]
+jobs:
+  run_ci:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Install valgrind
+      run: sudo apt-get install -y valgrind
+
+    - name: Build
+      run: make
+
+    - name: Run tests
+      run: make run_tests

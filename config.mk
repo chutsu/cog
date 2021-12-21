@@ -9,16 +9,10 @@ INCLUDES = -I${PWD}/lib -I/usr/include -I/usr/local/include
 LIBS = -L$(BLD_DIR) -lm -lcog -lrt -L/usr/lib -L/usr/local/lib
 
 # C COMPILER
-# CC = gcc
-CC = tcc
+CC = gcc
 STANDARD = -std=gnu99
 DEBUG_FLAGS = -g
 WARN_FLAGS = -Wall
-
-# WARN_FLAGS = -Weverything \
-# 			 -Wno-padded \
-# 			 -Wno-gnu-zero-variadic-macro-arguments \
-# 			 -Wno-empty-translation-unit
 CFLAGS = $(DEBUG_FLAGS) $(WARN_FLAGS) $(STANDARD) $(INCLUDES)
 
 # ARCHIVER

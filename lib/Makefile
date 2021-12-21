@@ -8,5 +8,5 @@ default: libcog
 %.o: %.c
 	$(COMPILE_OBJ)
 
-libcog: $(OBJS) 
+libcog: $(OBJS)
 	$(MAKE_STATIC_LIB)

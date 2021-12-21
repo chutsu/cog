@@ -1,6 +1,6 @@
 #!/bin/sh
 COMMAND='valgrind --error-exitcode=-1 --leak-check=full'
-TESTS_DIR='bin'
+TESTS_DIR='build/bin'
 TEST_FORMAT="*_tests"
 LOG_TESTS=0
 LOG_PATH=$TESTS_DIR/log
@@ -35,9 +35,9 @@ print_failed()
   echo "--------------------------------------------------"
 }
 
-check_mem_leaks()
+check_memleaks()
 {
-  VALGRIND_MODE=$(echo $COMMAND | grep "valgrind" | echo $?)
+  VALGRIND_MODE=$(echo "$COMMAND" | grep "valgrind" | echo $?)
 
   if [ "$VALGRIND_MODE" -eq "0" ]
   then
@@ -60,7 +60,7 @@ check_exit_status()
 analyze_test_results()
 {
   check_exit_status
-  check_mem_leaks
+  check_memleaks
 
   if [ $FAILED -eq 1 ]
   then
